@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>illusionxstudios — Transforming Ideas Into Reality</title>
+  <meta name="description" content="Premium 3D production and visualization studio. Interactive 3D Configurators, Industrial Visualization, Product Experience Solutions."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+</head>
+
+<body class="is-loading">
+
+<div id="global-loader">
+  <div class="loader-x-container">
+    <div class="loader-ring"></div>
+    <div class="loader-ring-2"></div>
+    <img src="assets/img/BlackBG_Symbol_Trans.png" alt="Loading..." class="loader-x" />
+  </div>
+</div>
+<div class="stars" aria-hidden="true"></div>
+<div class="meteor-layer" aria-hidden="true"><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="cur2" aria-hidden="true"></div>
+
+<!-- ══════════ NAVBAR — flat, logo left, links center, CTA right ══════════ -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><img src="assets/img/logo.png" alt="illusionxstudios" class="nav-logo-img"/></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li class="nav-dd">
+      <a href="services.html">Services</a>
+<!-- 
+      <div class="nav-dd-menu">
+        <a href="services.html#interactive-3d" class="dd-item"><strong>Interactive 3D Solutions</strong><span>Configurators, Digital Twins</span></a>
+        <a href="services.html#visualization" class="dd-item"><strong>Visualization &amp; Animation</strong><span>Rendering, Product Animation</span></a>
+        <a href="services.html#web-design" class="dd-item"><strong>Web Design &amp; Dev</strong><span>Corporate Sites, Web Apps</span></a>
+        <a href="services.html#marketing" class="dd-item"><strong>Digital Marketing</strong><span>Marketing Visuals, Social</span></a>
+        <a href="services.html#visual-content" class="dd-item"><strong>Visual Content</strong><span>Video Editing, Motion Graphics</span></a>
+      </div> -->
+
+    </li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+  <div class="nav-ham" aria-label="Menu"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="nav-overlay" id="nav-overlay">
+  <ul class="nav-overlay-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn-p nav-overlay-cta">Contact Us</a>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<section id="hero">
+  <div class="hero-carousel" aria-hidden="true">
+    <div class="hero-slide active" style="background-image:url('assets/img/Portfolio/Car%20&%20Watch/Luxury_sports_car_202604010054.jpeg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/Portfolio/Arch%20Viz/Hotel_Presp.png')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/Portfolio/Lifestyle/3D%20Bathroom%20Lifestyle%20images%20(1).png')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/Portfolio/Headphones/Headphones_Lifestyle.png')"></div>
+    <div class="hero-slide" style="background-image:url('assets/img/Portfolio/Medical/Medical_Life.png')"></div>
+  </div>
+  <div class="hero-carousel-overlay"></div>
+  <div id="h-grid-base" aria-hidden="true"></div>
+  <div id="h-grid" aria-hidden="true"></div>
+  <div class="spots" aria-hidden="true"><div class="spot l"></div><div class="spot r"></div></div>
+  <div class="hero-inner">
+    <div class="hero-deco-num" aria-hidden="true">03</div>
+    <div class="hero-content">
+      <div class="hero-top-bar" data-reveal="fade-blur">
+        <span class="hero-bar-line"></span>
+        <span class="hero-bar-label">Premium 3D Studio &nbsp;—&nbsp; ILLUSIONXSTUDIOS</span>
+      </div>
+      <div class="hero-stage">
+        <h1 class="hero-h1" data-reveal="clip-up">
+          <span class="h1-solid">Transforming</span>
+          <span class="h1-ghost">Ideas into</span>
+          <span class="h1-solid h1-last">Reality.</span>
+        </h1>
+        <div class="hero-right-col">
+          <p class="hero-tagline" data-reveal="fade-blur" data-reveal-delay="0.3">Crafting visually<br>immersive experiences<br>across animation,<br>visualization,<br>and development.</p>
+          <div class="hero-btns-wrap" data-reveal="slide-up" data-reveal-delay="0.55">
+            <a href="#showcase-1" class="btn-p">Explore Our Craft</a>
+            <a href="contact.html" class="btn-g">Start Your Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-indicators"><span class="hero-dot active"></span><span class="hero-dot"></span><span class="hero-dot"></span><span class="hero-dot"></span><span class="hero-dot"></span></div>
+  <div class="scroll-cue" aria-hidden="true"><p>Scroll to explore</p><div class="sc-arr"></div></div>
+</section>
+
+<!-- ══════════ SHOWCASE 1 — Featured Work ══════════ -->
+<section id="showcase-1" class="hscroll-section">
+  <div class="hscroll-header">
+    <span class="eyebrow" data-reveal="slide-right">Masterpieces</span>
+    <h2 class="sec-h" data-reveal="clip-up" data-reveal-delay="0.1">See What We’ve<br><span class="g-text">built.</span></h2>
+    <p class="hscroll-hint" data-reveal="fade-blur" data-reveal-delay="0.4"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Keep scrolling</p>
+  </div>
+<div class="hscroll-track" data-speed="1">
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><video src="assets/img/Portfolio/Headphones/Headphones_Config.mp4" autoplay loop muted playsinline loading="lazy"></video><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Interactive 3D</span><h3>Product Configurators</h3><p>Color & feature selection tools — let customers build their perfect product in real time.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><img src="assets/img/Portfolio/Medical/Medical_Exp.png" alt="Digital Twin" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Interactive 3D</span><h3>Digital Twins</h3><p>Exact virtual replicas of your machines & products — monitor, simulate, and present with precision.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><img src="assets/img/Portfolio/Chair/Chair_LifeStyle.png" alt="3D Web Viewer" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Interactive 3D</span><h3>Web-Based 3D Viewers</h3><p>Embed photorealistic 3D models directly in any browser — no app download, no friction.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><img src="assets/img/Portfolio/Arch%20Viz/Living%20Room.png" alt="AR VR Demo" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Interactive 3D</span><h3>AR / VR Demos</h3><p>Immersive experiences that put your product in the customer's hands before it even ships.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><img src="assets/img/Portfolio/Chair/Chair_Closeup.png" alt="Product Renders" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Visualization</span><h3>Product Renders</h3><p>Before/after shots, exploded views, and hero angles that no photographer can replicate.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><img src="assets/img/Portfolio/Medical/Medical_Life_2.png" alt="Industrial Animation" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Visualization</span><h3>Industrial Animation</h3><p>Machine workflow animations that make complex engineering immediately understandable.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><video src="assets/img/Portfolio/Car%20&%20Watch/DemoVideo_2.mp4" autoplay loop muted playsinline loading="lazy"></video><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Visualization</span><h3>Marketing Animations</h3><p>Short, punchy promo videos that stop the scroll and drive action.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><img src="assets/img/Portfolio/Car%20&%20Watch/Ultra_photorealistic_studio_202603311000.png" alt="Web Design" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Web Design & Dev</span><h3>Landing Pages</h3><p>Campaign-ready pages built to convert — fast, sharp, and on-brand.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><img src="assets/img/Portfolio/Arch%20Viz/ITPark_Office.png" alt="Custom Dashboard" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Web Design & Dev</span><h3>Custom Dashboards</h3><p>Bespoke tools and dashboards that make your data actually useful.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><img src="assets/img/Portfolio/Lifestyle/3D%20Bathroom%20Lifestyle%20images%20(3).png" alt="Ad Creatives" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Digital Marketing</span><h3>Ad Creatives</h3><p>Static + video ad assets built for performance — designed to click, built to convert.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><video src="assets/img/Portfolio/Headphones/Headphones_360.mp4" autoplay loop muted playsinline loading="lazy"></video><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Digital Marketing</span><h3>Social Media Systems</h3><p>Consistent, scroll-stopping content systems built around your brand identity.</p></div></div>
+    <div class="hscroll-card"><div class="hscroll-img-wrap"><img src="assets/img/Portfolio/Arch%20Viz/Hospital_Reception.png" alt="Funnel Pages" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="hscroll-meta"><span class="hscroll-cat">Digital Marketing</span><h3>Funnel Pages & Lead Gen</h3><p>End-to-end funnel setups that turn cold traffic into qualified leads.</p></div></div>
+    <div class="hscroll-card hscroll-cta-card"><div class="hscroll-cta-inner"><span class="eyebrow">Impressed?</span><h3>This Is Just<br>the Surface.</h3><a href="#portfolio" class="btn-p">See Full Portfolio →</a></div></div>
+  </div>
+</section>
+
+<!-- ══════════ MISSION ══════════ -->
+<section id="mission">
+  <div class="lamp-cone" aria-hidden="true"></div>
+  <div class="lamp-bar" aria-hidden="true"></div>
+  <div class="miss-inner">
+    <span class="eyebrow" data-reveal="slide-right">Our Purpose</span>
+    <h2 class="sec-h" data-reveal="words" style="font-size:clamp(36px,6vw,72px);letter-spacing:-2px;">Turning Complexity Into Clarity</h2>
+    <p class="sec-sub" data-reveal="fade-blur" data-reveal-delay="0.4" style="margin:0 auto;text-align:center;">From factory floors to digital storefronts — we transform industrial complexity into immersive 3D experiences that your customers actually understand. No jargon. No confusion. Just crystal-clear product stories that sell.</p>
+  </div>
+</section>
+
+<!-- ══════════ VORTEX (moved up after mission) ══════════ -->
+<!-- <section id="vortex">
+  <canvas id="vortex-c" aria-hidden="true"></canvas>
+  <p class="vt-txt"><span style="color:var(--cyan)">✦</span>&nbsp; The Numbers Behind the Magic &nbsp;<span style="color:var(--cyan)">✦</span></p>
+</section> -->
+
+<!-- ══════════ WHY CHOOSE US (moved up after vortex) ══════════ -->
+<section id="why">
+  <div style="max-width:1200px;margin:0 auto;text-align:center;">
+    <span class="eyebrow" data-reveal="slide-right">Why Choose Us</span>
+    <h2 class="sec-h" data-reveal="clip-up">Built Different.<br><span class="g-text">By Design.</span></h2>
+  </div>
+  <div class="why-row">
+    <div class="wc reveal"><div class="mtr-rain"></div><svg class="wc-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.5"/><path d="M14 20l5 5 7-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><h3 class="wc-title">Pixel-Perfect Precision</h3><p class="wc-body">Every render, every frame, every model built to photorealistic standards that make the real thing look less real.</p></div>
+    <div class="wc reveal"><div class="mtr-rain"></div><svg class="wc-icon" viewBox="0 0 40 40" fill="none"><rect x="4" y="4" width="32" height="32" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M12 20h16M20 12v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><h3 class="wc-title">End-to-End Studio</h3><p class="wc-body">Concept to delivery under one roof. No coordination headaches. Strategy, art, and code — all in sync.</p></div>
+    <div class="wc reveal"><div class="mtr-rain"></div><svg class="wc-icon" viewBox="0 0 40 40" fill="none"><path d="M8 28l8-8 6 6 10-14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/></svg><h3 class="wc-title">ROI-Driven Approach</h3><p class="wc-body">We measure success by your conversion rates, not just our render quality. 3D that sells is 3D that matters.</p></div>
+  </div>
+</section>
+
+<!-- ══════════ SERVICES ══════════ -->
+<section id="services">
+  <div style="max-width:1200px;margin:0 auto;">
+    <span class="eyebrow" data-reveal="slide-right">Our Services</span>
+    <h2 class="sec-h" data-reveal="clip-up">Five Specialties.<br><span class="g-text">One Clear Focus.</span></h2>
+    <p class="sec-sub" data-reveal="fade-blur" data-reveal-delay="0.25" style="max-width:600px;margin-bottom:48px;">We don't do one thing well. We do five things at a level that redefines what's possible.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="sc reveal"><div class="spt"></div><span class="svc-tag tc">Client Favorite</span><svg class="sc-icon" viewBox="0 0 48 48" fill="none"><path d="M24 4L44 14V34L24 44L4 34V14L24 4Z" stroke="currentColor" stroke-width="2"/><path d="M24 4V44M4 14L44 14M4 34L44 34" stroke="currentColor" stroke-width="1" opacity="0.4"/></svg><h3 class="sc-title">Interactive 3D Solutions</h3><p class="sc-tagline">Your product. Their hands. Zero friction.</p><ul class="sc-list"><li>Industrial 3D Configurators</li><li>Interactive Product Demos</li><li>Digital Twin Visualization</li><li>Web-based 3D Tools</li></ul><a href="services.html" class="sc-link">Explore service →</a></div>
+    <div class="sc reveal"><div class="spt"></div><span class="svc-tag tb">Elite Product</span><svg class="sc-icon" viewBox="0 0 48 48" fill="none"><rect x="4" y="8" width="40" height="30" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="30" cy="20" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M4 30L16 20L22 26L30 18L44 30" stroke="currentColor" stroke-width="1.5"/></svg><h3 class="sc-title">3D Visualization &amp; Animation</h3><p class="sc-tagline">So real, you'll want to touch the screen.</p><ul class="sc-list"><li>Product Rendering</li><li>Product Animation</li><li>Technical Visualization</li><li>AR-ready Assets</li></ul><a href="services.html" class="sc-link">Explore service →</a></div>
+    <div class="sc reveal"><div class="spt"></div><span class="svc-tag tv">Full Stack</span><svg class="sc-icon" viewBox="0 0 48 48" fill="none"><path d="M16 18L8 24L16 30M32 18L40 24L32 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M28 12L20 36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><h3 class="sc-title">Web Design &amp; Development</h3><p class="sc-tagline">Websites that work as hard as your sales team.</p><ul class="sc-list"><li>Corporate Websites</li><li>Interactive Web Apps</li><li>Configurator Integration</li></ul><a href="services.html" class="sc-link">Explore service →</a></div>
+    <div class="sc reveal"><div class="spt"></div><span class="svc-tag tc">ROI Focused</span><svg class="sc-icon" viewBox="0 0 48 48" fill="none"><path d="M8 36L18 24L26 30L36 16L44 22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="38" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/></svg><h3 class="sc-title">Digital Marketing &amp; Visual Content</h3><p class="sc-tagline">Content that stops the scroll and starts the sale.</p><ul class="sc-list"><li>Product Marketing Visuals</li><li>Technical Marketing Content</li><li>Social Media Visuals</li></ul><a href="services.html" class="sc-link">Explore service →</a></div>
+    <div class="sc reveal"><div class="spt"></div><span class="svc-tag tb">Visual Communication</span><svg class="sc-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2"/><path d="M19 18L33 24L19 30V18Z" fill="currentColor" opacity="0.6"/><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1" opacity="0.3"/></svg><h3 class="sc-title">Visual Content Production</h3><p class="sc-tagline">Every frame, a masterpiece. Every edit, intentional.</p><ul class="sc-list"><li>Image Editing &amp; Retouching</li><li>Video Editing</li><li>Motion Graphics</li></ul><a href="services.html" class="sc-link">Explore service →</a></div>
+    <div class="sc reveal" style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:linear-gradient(135deg,rgba(0,212,255,.04),rgba(139,0,255,.04));"><div class="spt"></div><h3 class="sc-title" style="font-size:clamp(22px,2.5vw,30px);line-height:1.15;margin-bottom:20px;">Ready to Start<br>Your Project?</h3><p style="font-size:13.5px;color:var(--muted);margin-bottom:28px;line-height:1.7;">Tell us what you're building.</p><a href="contact.html" class="btn-p">Book a Call →</a></div>
+  </div>
+</section>
+
+<!-- ══════════ SHOWCASE 2 — Our Disciplines ══════════ -->
+<section id="showcase-2" class="hscroll-section">
+  <div class="hscroll-header">
+    <span class="eyebrow" data-reveal="slide-right">Our Disciplines</span>
+    <h2 class="sec-h" data-reveal="words">From Concept to Conversion.</h2>
+    <p class="hscroll-hint" data-reveal="fade-blur" data-reveal-delay="0.4">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Keep scrolling
+    </p>
+  </div>
+
+  <div class="hscroll-track hscroll-track-extended" data-speed="1">
+    <div class="hscroll-card hscroll-card-wide">
+      <div class="hscroll-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80"
+          alt="Concept"
+          loading="lazy"
+        />
+        <div class="img-reveal-mask"></div>
+      </div>
+      <div class="hscroll-meta">
+        <span class="hscroll-cat">01 — Concept</span>
+        <h3>The Spark</h3>
+        <p>Every great product experience begins with understanding what makes yours different.</p>
+      </div>
+    </div>
+
+    <div class="hscroll-card hscroll-card-wide">
+      <div class="hscroll-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=80"
+          alt="Model"
+          loading="lazy"
+        />
+        <div class="img-reveal-mask"></div>
+      </div>
+      <div class="hscroll-meta">
+        <span class="hscroll-cat">02 — Model</span>
+        <h3>The Build</h3>
+        <p>Polygon by polygon, we construct digital twins indistinguishable from reality.</p>
+      </div>
+    </div>
+
+    <div class="hscroll-card hscroll-card-wide">
+      <div class="hscroll-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+          alt="Refine"
+          loading="lazy"
+        />
+        <div class="img-reveal-mask"></div>
+      </div>
+      <div class="hscroll-meta">
+        <span class="hscroll-cat">03 — Refine</span>
+        <h3>The Polish</h3>
+        <p>Textures, lighting, materials — obsessed over until perfection isn't enough.</p>
+      </div>
+    </div>
+
+    <div class="hscroll-card hscroll-card-wide">
+      <div class="hscroll-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+          alt="Interact"
+          loading="lazy"
+        />
+        <div class="img-reveal-mask"></div>
+      </div>
+      <div class="hscroll-meta">
+        <span class="hscroll-cat">04 — Interact</span>
+        <h3>The Experience</h3>
+        <p>We make it touchable, spinnable, configurable. Your product, in their hands.</p>
+      </div>
+    </div>
+
+    <div class="hscroll-card hscroll-card-wide">
+      <div class="hscroll-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" 
+          alt="Happy customer using mobile"
+          loading="lazy"
+        />
+        
+        <div class="img-reveal-mask"></div>
+      </div>
+      <div class="hscroll-meta">
+        <span class="hscroll-cat">05 — Convert</span>
+        <h3>The Result</h3>
+        <p>Every pixel optimized for one thing: making your customers say yes.</p>
+      </div>
+    </div>
+
+    <div class="hscroll-spacer" style="flex:0 0 30vw;"></div>
+  </div>
+</section>
+
+<!-- ══════════ CLIENTS ══════════ -->
+<section id="clients">
+  <div style="max-width:1200px;margin:0 auto;">
+    <span class="eyebrow" data-reveal="slide-right">Built For</span>
+    <h2 class="sec-h" data-reveal="clip-up">Built for Every<br><span class="g-text">Visionary.</span></h2>
+    <p class="sec-sub" data-reveal="fade-blur" data-reveal-delay="0.25" style="max-width:560px;margin-bottom:48px;">Whether you're launching a product or reimagining an industry — we're your visual weapon.</p>
+  </div>
+  <div class="bento">
+    <div class="bc s2 reveal"><div class="bc-glow"></div><span class="bc-chip">Product Manufacturers</span><svg class="bc-icon" viewBox="0 0 40 40" fill="none"><rect x="4" y="16" width="32" height="20" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M12 16V10a8 8 0 0116 0v6" stroke="currentColor" stroke-width="1.5"/><circle cx="20" cy="26" r="4" stroke="currentColor" stroke-width="1.5"/></svg><h3 class="bc-title">Product Manufacturers</h3><p class="bc-body">Launch new products with photorealistic 3D visuals before they're even built.</p><div class="bc-more"><div class="bc-more-in">We work directly with your engineering specs and CAD files. <a href="contact.html" class="bc-learn">Start a project →</a></div></div></div>
+    <div class="bc reveal"><div class="bc-glow"></div><span class="bc-chip">E-Commerce</span><svg class="bc-icon" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="16" stroke="currentColor" stroke-width="1.5"/><path d="M12 20h16M20 12v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><h3 class="bc-title">E-Commerce Brands</h3><p class="bc-body">Interactive configurators boost conversion by 40%.</p><div class="bc-more"><div class="bc-more-in">Embed 3D viewers into Shopify, WooCommerce, or any platform. <a href="contact.html" class="bc-learn">Start a project →</a></div></div></div>
+    <div class="bc reveal"><div class="bc-glow"></div><span class="bc-chip">Real Estate</span><svg class="bc-icon" viewBox="0 0 40 40" fill="none"><path d="M6 36V20L20 8l14 12v16H6Z" stroke="currentColor" stroke-width="1.5"/><path d="M15 36v-10h10v10" stroke="currentColor" stroke-width="1.5"/></svg><h3 class="bc-title">Real Estate Developers</h3><p class="bc-body">Photorealistic arch viz that sells before concrete is poured.</p><div class="bc-more"><div class="bc-more-in">Interactive floor plans, virtual walkthroughs. <a href="contact.html" class="bc-learn">Start a project →</a></div></div></div>
+    <div class="bc reveal"><div class="bc-glow"></div><span class="bc-chip">Agencies</span><svg class="bc-icon" viewBox="0 0 40 40" fill="none"><path d="M8 28c0-8 6-14 12-14s12 6 12 14" stroke="currentColor" stroke-width="1.5"/><path d="M20 14V8M8 20H4M36 20h-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><h3 class="bc-title">Marketing Agencies</h3><p class="bc-body">White-label 3D production at scale, on your brand.</p><div class="bc-more"><div class="bc-more-in">Volume pricing, dedicated account managers. <a href="contact.html" class="bc-learn">Partner with us →</a></div></div></div>
+    <div class="bc reveal"><div class="bc-glow"></div><span class="bc-chip">Technology</span><svg class="bc-icon" viewBox="0 0 40 40" fill="none"><rect x="8" y="8" width="24" height="24" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 16h8M16 20h8M16 24h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><h3 class="bc-title">Technology Companies</h3><p class="bc-body">Interactive 3D explainers that replace 10-page spec sheets.</p><div class="bc-more"><div class="bc-more-in">Make technical products understandable. <a href="contact.html" class="bc-learn">Start a project →</a></div></div></div>
+  </div>
+</section>
+
+<!-- ══════════ PORTFOLIO ══════════ -->
+<section id="portfolio" class="hscroll-section portfolio-section">
+  <div class="hscroll-header">
+    <span class="eyebrow" data-reveal="slide-right">Our Work</span>
+    <h2 class="sec-h" data-reveal="clip-up">Work That Doesn't<br>Just Look Good —<br><span class="g-text">It Sells.</span></h2>
+    <p class="hscroll-hint" data-reveal="fade-blur" data-reveal-delay="0.35"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Keep scrolling</p>
+  </div>
+  <div class="hscroll-track portfolio-track" data-speed="1">
+    <div class="port-card"><div class="port-card-img"><img src="assets/img/Portfolio/Car%20&%20Watch/Ultra_photorealistic_studio_202604010053.png" alt="Automotive" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="port-card-content"><span class="port-card-num">01</span><span class="port-card-cat">Automotive</span><h3 class="port-card-title">AutoMotion X7</h3><p class="port-card-desc">Interactive configurator — conversion up 340%.</p><span class="port-card-tag">Product Configurator</span></div></div>
+    <div class="port-card"><div class="port-card-img"><img src="assets/img/Portfolio/Arch%20Viz/Appartments.png" alt="Real Estate" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="port-card-content"><span class="port-card-num">02</span><span class="port-card-cat">Real Estate</span><h3 class="port-card-title">ArchLux Residences</h3><p class="port-card-desc">Buyers toured units that didn't exist yet.</p><span class="port-card-tag">Architectural Visualization</span></div></div>
+    <div class="port-card"><div class="port-card-img"><img src="assets/img/Portfolio/Medical/Medical_Ins.png" alt="Medical" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="port-card-content"><span class="port-card-num">03</span><span class="port-card-cat">Medical</span><h3 class="port-card-title">MediCore Device</h3><p class="port-card-desc">Complex device into a 90-second sales weapon.</p><span class="port-card-tag">Technical Animation</span></div></div>
+    <div class="port-card"><div class="port-card-img"><img src="assets/img/Portfolio/Headphones/Headphones_F.png" alt="Electronics" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="port-card-content"><span class="port-card-num">04</span><span class="port-card-cat">Electronics</span><h3 class="port-card-title">SoundWave Pro</h3><p class="port-card-desc">Replaced an entire photo studio.</p><span class="port-card-tag">360° Product View</span></div></div>
+    <div class="port-card"><div class="port-card-img"><img src="assets/img/Portfolio/Chair/Chair_Front.png" alt="Industrial" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="port-card-content"><span class="port-card-num">05</span><span class="port-card-cat">Furniture</span><h3 class="port-card-title">ErgoEdge Seating</h3><p class="port-card-desc">Saved $2M in prototyping costs in year one.</p><span class="port-card-tag">Digital Twin</span></div></div>
+    <div class="port-card"><div class="port-card-img"><img src="assets/img/Portfolio/Car%20&%20Watch/Ultra_photorealistic_studio_202603311000%20(1).png" alt="Luxury" loading="lazy"/><div class="img-reveal-mask"></div></div><div class="port-card-content"><span class="port-card-num">06</span><span class="port-card-cat">Luxury</span><h3 class="port-card-title">LuxWatch Co</h3><p class="port-card-desc">Client used renders instead of photographers.</p><span class="port-card-tag">Product Rendering</span></div></div>
+    <div class="port-card port-card-cta"><div class="port-cta-inner"><span class="eyebrow">Want results like these?</span><h3>Your Product<br>Could Be Next.</h3><a href="contact.html" class="btn-p">Get Started →</a></div></div>
+  </div>
+</section>
+
+<!-- ══════════ STATS ══════════ -->
+<section id="stats">
+  <div class="aurora" aria-hidden="true"></div>
+  <div style="position:relative;z-index:2;text-align:center;">
+    <span class="eyebrow" data-reveal="slide-right">By the Numbers</span>
+    <h2 class="sec-h" data-reveal="words" style="margin-bottom:72px;">The Numbers Don't Lie.</h2>
+    <div class="stats-row">
+      <div class="reveal"><div class="stn" data-count="50" data-suffix="+">50+</div><div class="stl">Projects Delivered</div></div>
+      <div class="reveal"><div class="stn" data-count="16" data-suffix="+">16+</div><div class="stl">Global Clients</div></div>
+      <div class="reveal"><div class="stn" data-count="4" data-suffix="+">4+</div><div class="stl">Years of Excellence</div></div>
+      <div class="reveal"><div class="stn" data-count="100" data-suffix="%">100%</div><div class="stl">Client Retention</div></div>
+    </div>
+    <p style="position:relative;z-index:2;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--sub);margin-bottom:36px;">Trusted by Industry Leaders</p>
+    <div class="mq-wrap"><div class="mq-track">
+      <span class="mq-item">Innovatech</span><span class="mq-dot">◆</span>
+      <span class="mq-item">ArchWorks</span><span class="mq-dot">◆</span>
+      <span class="mq-item">PrecisionMfg</span><span class="mq-dot">◆</span>
+      <span class="mq-item">GlobalBrands</span><span class="mq-dot">◆</span>
+      <span class="mq-item">TechCorp</span><span class="mq-dot">◆</span>
+      <span class="mq-item">LuxHomes</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Motorverse</span><span class="mq-dot">◆</span>
+      <span class="mq-item">MedSolutions</span><span class="mq-dot">◆</span>
+      <span class="mq-item">NexGen Industries</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Apex Dynamics</span><span class="mq-dot">◆</span>
+      <span class="mq-item">VistaCraft</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Quantum Digital</span><span class="mq-dot">◆</span>
+      <span class="mq-item">EliteDesign Co</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Horizon Labs</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Pinnacle Systems</span><span class="mq-dot">◆</span>
+      <span class="mq-item">CrestView Studios</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Forge &amp; Frame</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Luminary Group</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Stratos Digital</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Vanguard Tech</span><span class="mq-dot">◆</span>
+      <!-- duplicate for seamless loop -->
+      <span class="mq-item">Innovatech</span><span class="mq-dot">◆</span>
+      <span class="mq-item">ArchWorks</span><span class="mq-dot">◆</span>
+      <span class="mq-item">PrecisionMfg</span><span class="mq-dot">◆</span>
+      <span class="mq-item">GlobalBrands</span><span class="mq-dot">◆</span>
+      <span class="mq-item">TechCorp</span><span class="mq-dot">◆</span>
+      <span class="mq-item">LuxHomes</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Motorverse</span><span class="mq-dot">◆</span>
+      <span class="mq-item">MedSolutions</span><span class="mq-dot">◆</span>
+      <span class="mq-item">NexGen Industries</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Apex Dynamics</span><span class="mq-dot">◆</span>
+      <span class="mq-item">VistaCraft</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Quantum Digital</span><span class="mq-dot">◆</span>
+      <span class="mq-item">EliteDesign Co</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Horizon Labs</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Pinnacle Systems</span><span class="mq-dot">◆</span>
+      <span class="mq-item">CrestView Studios</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Forge &amp; Frame</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Luminary Group</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Stratos Digital</span><span class="mq-dot">◆</span>
+      <span class="mq-item">Vanguard Tech</span><span class="mq-dot">◆</span>
+    </div></div>
+  </div>
+</section>
+
+<!-- ══════════ FINAL CTA ══════════ -->
+<section id="cta-final">
+  <div id="cta-grid" aria-hidden="true"></div>
+  <div class="cta-lamp" aria-hidden="true"></div>
+  <div class="cta-inner">
+    <span class="eyebrow" data-reveal="slide-right">Ready?</span>
+    <h2 class="cta-h" data-reveal="clip-up" data-reveal-delay="0.1">Your Product Deserves<br>Better Than Average.</h2>
+    <p class="cta-sub" data-reveal="fade-blur" data-reveal-delay="0.35">Join 50+ companies who chose illusionxstudios to transform their products into immersive experiences that actually convert.</p>
+    <div class="btn-row center" data-reveal="slide-up" data-reveal-delay="0.55"><a href="contact.html" class="btn-p">Get Started →</a></div>
+    <p class="cta-email" data-reveal="fade-blur" data-reveal-delay="0.7">
+      Have a question? 
+      <a href="https://wa.me/919940911894" target="_blank" rel="noopener">
+        Chat with us on WhatsApp
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="foot-in">
+    <div class="foot-brand"><img src="assets/img/logo.png" alt="illusionxstudios" style="height:36px;width:auto;margin-bottom:10px;"/><p>Transforming Ideas into Reality. Premium 3D production studio delivering immersive product experiences that convert.</p></div>
+    <div class="foot-col"><h4>Services</h4><ul><li><a href="services.html">Interactive 3D</a></li><li><a href="services.html">Visualization</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Digital Marketing</a></li><li><a href="services.html">Visual Content</a></li></ul></div>
+    <div class="foot-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="foot-col">
+      <h4>Connect</h4>
+      <ul>
+        <li>
+          <a href="https://wa.me/919940911894" target="_blank" rel="noopener">
+            WhatsApp: +91 99409 11894
+          </a>
+        </li>
+        <li>
+          <a href="mailto:info@illusionxstudios.com">Email Us</a>
+        </li>
+        <!-- <li>
+          <a href="https://www.instagram.com/illusionxstudios/" target="_blank" rel="noopener">
+            Instagram
+          </a>
+        </li> -->
+        <li>
+          <a href="https://www.linkedin.com/in/illusion-x-studios-482640298/" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot"><p>© 2025 illusionxstudios. All rights reserved.</p><p>Crafted with obsession. Built to convert.</p></div>
+</footer>
+
+<div class="modal" id="reel-modal" role="dialog" aria-modal="true"><div class="modal-box"><button class="modal-x" aria-label="Close">✕</button><p style="color:var(--muted);font-size:16px;text-align:center;">🎬 Showreel coming soon.</p></div></div>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Services — illusionxstudios</title>
+  <meta name="description" content="Five disciplines. One studio. Interactive 3D, Visualization, Web Design, Digital Marketing, Visual Content Production."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/main.css?v=2"/>
+</head>
+<body class="is-loading">
+
+<div id="global-loader">
+  <div class="loader-x-container">
+    <div class="loader-ring"></div>
+    <div class="loader-ring-2"></div>
+    <img src="assets/img/BlackBG_Symbol_Trans.png" alt="Loading..." class="loader-x" />
+  </div>
+</div>
+<div class="stars" aria-hidden="true"></div>
+<div class="meteor-layer" aria-hidden="true"><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="cur2" aria-hidden="true"></div>
+
+<!-- NAVBAR — same as index -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><img src="assets/img/logo.png" alt="illusionxstudios" class="nav-logo-img"/></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+  <div class="nav-ham" aria-label="Menu"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="nav-overlay" id="nav-overlay">
+  <ul class="nav-overlay-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn-p nav-overlay-cta">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="srv-hero">
+  <div class="lamp-cone" aria-hidden="true"></div>
+  <div class="lamp-bar" aria-hidden="true"></div>
+  <div class="srv-hero-content">
+    <span class="eyebrow reveal">Our Disciplines</span>
+    <h1 class="srv-hero-title reveal">What We Create</h1>
+    <p class="sec-sub reveal" style="margin:0 auto;text-align:center;">Five disciplines. One studio. Infinite possibilities.</p>
+  </div>
+</section>
+
+<!-- GROUP 1: INTERACTIVE 3D -->
+<section class="srv-group" style="background:#020408;">
+  <div class="srv-group-in">
+    <div>
+      <p class="srv-label reveal" style="color:var(--cyan)"><span class="srv-dot" style="background:var(--cyan)"></span>Group 01</p>
+      <h2 class="srv-title reveal">Interactive<br>3D Solutions</h2>
+      <p class="srv-desc reveal">We build immersive, browser-native 3D tools that let your customers touch, feel, and configure your product before it's even manufactured. No app. No friction. Just sales.</p>
+      <div class="sub-list reveal">
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Industrial 3D Configurators</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">Let customers configure products in real-time — colors, materials, components. Embed anywhere. Works on any device, any browser. Powered by WebGL.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Interactive Product Demonstrations</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">Guided 3D walkthroughs that explain your product better than any sales rep. Feature callouts, animated sequences, narrated explainers — all interactive.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Digital Twin Visualization</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">Mirror your physical product digitally. Monitor, configure, and present in real-time. Ideal for industrial equipment, manufacturing, and IoT-connected products.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Web-based 3D Tools</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">No app install needed. Powerful 3D experiences delivered via browser — from product viewers to room planners to assembly simulators.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+      </div>
+    </div>
+      <div class="srv-iframe-wrap reveal" style="--va:var(--cyan)" data-lenis-prevent>
+        <div class="iframe-hud">
+          <div class="hud-dots"><span></span><span></span><span></span></div>
+          <div class="hud-title">3D ENGINE <span style="color: var(--va)">//</span> KITCHEN</div>
+          <button class="hud-fullview-btn" title="Full View" aria-label="Expand to full view">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+          </button>
+        </div>
+        <div class="iframe-preview">
+          <div class="iframe-preview-glow"></div>
+          <div class="iframe-preview-content">
+            <div class="iframe-preview-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M24 4L44 14V34L24 44L4 34V14L24 4Z" stroke="currentColor" stroke-width="1.5"/><path d="M24 4V44M4 14L44 14M4 34L44 34" stroke="currentColor" stroke-width="0.5" opacity="0.4"/></svg>
+            </div>
+            <p class="iframe-preview-label">Interactive 3D Experience</p>
+            <button class="iframe-launch-btn" data-src="https://share.arcware.cloud/v1/share-590131f6-944f-4da3-b6e7-ceaa61fb6e5c">
+              <span class="launch-btn-glow"></span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Launch 3D Engine
+            </button>
+          </div>
+        </div>
+        <div class="iframe-loader" style="display:none;">
+          <div class="loc-loader">
+            <div class="loc-ring"></div>
+            <div class="loc-ring-2"></div>
+          </div>
+          <span>Initializing 3D Engine...</span>
+        </div>
+        <iframe data-src="https://share.arcware.cloud/v1/share-590131f6-944f-4da3-b6e7-ceaa61fb6e5c" title="Kitchen 3D Experience" loading="lazy"></iframe>
+      </div>
+        
+  </div>
+</section>
+
+<div class="sdiv-wrap"><div class="sdiv"></div></div>
+
+<!-- GROUP 2: VISUALIZATION & WEB -->
+<section class="srv-group">
+  <div class="srv-group-in rev">
+
+    <div class="srv-iframe-wrap reveal" style="--va:var(--elec)" data-lenis-prevent>
+      <div class="iframe-hud">
+        <div class="hud-dots"><span></span><span></span><span></span></div>
+        <div class="hud-title">3D ENGINE <span style="color: var(--va)">//</span> PC CABINET</div>
+        <button class="hud-fullview-btn" title="Full View" aria-label="Expand to full view">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+        </button>
+      </div>
+      <div class="iframe-preview">
+        <div class="iframe-preview-glow"></div>
+        <div class="iframe-preview-content">
+          <div class="iframe-preview-icon">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M16 16h16M16 24h16M16 32h8" stroke="currentColor" stroke-width="1" opacity="0.4"/></svg>
+          </div>
+          <p class="iframe-preview-label">Interactive 3D Experience</p>
+          <button class="iframe-launch-btn" data-src="https://battlebox-configurator.arcware.cloud/?overlay=false">
+            <span class="launch-btn-glow"></span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Launch 3D Engine
+          </button>
+        </div>
+      </div>
+      <div class="iframe-loader" style="display:none;">
+        <div class="loc-loader">
+          <div class="loc-ring" style="border-color: rgba(0, 128, 255, 0.4)"></div>
+          <div class="loc-ring-2"></div>
+        </div>
+        <span>Initializing 3D Engine...</span>
+      </div>
+      <iframe data-src="https://battlebox-configurator.arcware.cloud/?overlay=false" title="Compute PC Cabinet" loading="lazy"></iframe>
+    </div>
+    
+    <div>
+      <p class="srv-label reveal" style="color:#66BBFF"><span class="srv-dot" style="background:#66BBFF"></span>Group 02</p>
+      <h2 class="srv-title reveal">Visualization,<br>Animation &amp; Web</h2>
+      <p class="srv-desc reveal">Studio-quality renders, cinematic animations, and full-stack web development. From photorealistic product stills to browser-embedded configurators.</p>
+      <div class="sub-list reveal">
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Product Rendering</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">Studio-quality stills from every angle, in any environment, at any scale. Outputs ready for web, print, social, and e-commerce platforms.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Product Animation</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">360° spins, exploded views, assembly sequences — motion that explains. From hero videos to technical walkthroughs.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Technical Visualization</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">Engineering complexity made beautiful. Cross-section views, technical cutaways, annotated diagrams in photorealistic 3D.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">AR-ready Assets</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">Future-proof 3D files optimized for Apple AR, WebAR, and Meta platforms. USDZ, GLB, and WebGL-ready deliverables from day one.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Corporate Websites &amp; Web Apps</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">Design + dev for B2B companies that need more than a template. Performance-first, conversion-optimized, built to embed our 3D tools natively.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="sdiv-wrap"><div class="sdiv" style="background:linear-gradient(90deg,transparent,var(--violet),var(--cyan),var(--violet),transparent)"></div></div>
+
+<!-- GROUP 3: MARKETING & CONTENT -->
+<section class="srv-group" style="background:#020408;">
+  <div class="srv-group-in">
+    <div>
+      <p class="srv-label reveal" style="color:#BB77FF"><span class="srv-dot" style="background:#BB77FF"></span>Group 03</p>
+      <h2 class="srv-title reveal">Marketing &amp;<br>Visual Content</h2>
+      <p class="srv-desc reveal">Campaign-ready visuals, motion graphics, and social content that makes your products impossible to ignore. We speak in the language of conversion.</p>
+      <div class="sub-list reveal">
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Product Marketing Visuals</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">Campaign-ready images that outperform photo shoots at a fraction of the cost. Any angle, any background, any lighting — infinitely revisable.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Technical Marketing Content</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">Turn specs into stories. Explainer visuals for complex tech that speaks to engineers and C-suite decision makers simultaneously.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Social Media Visuals</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">Thumb-stopping 3D content for Instagram, LinkedIn, and beyond. From static posts to Reels-ready 3D animations that demand attention.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+        <div class="sub-card">
+          <div class="sub-hdr"><span class="sub-title">Video Editing &amp; Motion Graphics</span><span class="sub-arrow">+</span></div>
+          <div class="sub-body"><div class="sub-body-in">From raw renders to broadcast-ready content. 3D compositing, title sequences, lower thirds — post-production at studio level.<a href="contact.html" class="sub-cta">Get a quote →</a></div></div>
+        </div>
+      </div>
+    </div>
+      <div class="srv-iframe-wrap reveal" style="--va:var(--violet)" data-lenis-prevent>
+        <div class="iframe-hud">
+          <div class="hud-dots"><span></span><span></span><span></span></div>
+          <div class="hud-title">3D ENGINE <span style="color: var(--va)">//</span> LUXURY WATCH</div>
+          <button class="hud-fullview-btn" title="Full View" aria-label="Expand to full view">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+          </button>
+        </div>
+        <div class="iframe-preview">
+          <div class="iframe-preview-glow"></div>
+          <div class="iframe-preview-content">
+            <div class="iframe-preview-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="1.5"/><path d="M24 14v10l7 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="0.5" opacity="0.3"/></svg>
+            </div>
+            <p class="iframe-preview-label">Interactive 3D Experience</p>
+            <button class="iframe-launch-btn" data-src="https://watch.arcware.cloud/">
+              <span class="launch-btn-glow"></span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Launch 3D Engine
+            </button>
+          </div>
+        </div>
+        <div class="iframe-loader" style="display:none;">
+          <div class="loc-loader">
+            <div class="loc-ring" style="border-color: rgba(139, 0, 255, 0.4)"></div>
+            <div class="loc-ring-2" style="border-color: rgba(0, 212, 255, 0.5)"></div>
+          </div>
+          <span>Initializing 3D Engine...</span>
+        </div>
+        <iframe data-src="https://watch.arcware.cloud/" title="Watch 3D Experience" loading="lazy"></iframe>
+      </div>
+    
+  </div>
+</section>
+
+<!-- SERVICES CTA -->
+<section class="srv-cta">
+  <div class="srv-cta-bg" aria-hidden="true"></div>
+  <div class="srv-cta-in">
+    <span class="eyebrow reveal">Start Today</span>
+    <h2 class="srv-cta-h reveal">Every Project Starts<br>with a Conversation</h2>
+    <p class="srv-cta-sub reveal">Tell us what you're building. We'll tell you exactly how 3D can accelerate your sales, cut your costs, and impress your customers.</p>
+    <div class="btn-row center reveal">
+      <a href="contact.html" class="btn-p">Book a Discovery Call →</a>
+      <a href="index.html#portfolio" class="btn-g">View Our Work</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-in">
+    <div class="foot-brand"><img src="assets/img/logo.png" alt="illusionxstudios" style="height:36px;width:auto;margin-bottom:10px;"/><p>Transforming Ideas Into Reality. Premium 3D production studio.</p></div>
+    <div class="foot-col"><h4>Services</h4><ul><li><a href="services.html">Interactive 3D</a></li><li><a href="services.html">Visualization</a></li><li><a href="services.html">Web Development</a></li><li><a href="services.html">Digital Marketing</a></li><li><a href="services.html">Visual Content</a></li></ul></div>
+    <div class="foot-col"><h4>Company</h4><ul><li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li><li><a href="index.html#portfolio">Portfolio</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="foot-col">
+      <h4>Connect</h4>
+      <ul>
+        <li>
+          <a href="https://wa.me/919940911894" target="_blank" rel="noopener">
+            WhatsApp: +91 99409 11894
+          </a>
+        </li>
+        <li>
+          <a href="mailto:info@illusionxstudios.com">Email Us</a>
+        </li>
+        <!-- <li>
+          <a href="https://www.instagram.com/illusionxstudios/" target="_blank" rel="noopener">
+            Instagram
+          </a>
+        </li> -->
+        <li>
+          <a href="https://www.linkedin.com/in/illusion-x-studios-482640298/" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bot"><p>© 2025 illusionxstudios. All rights reserved.</p><p>Crafted with obsession. Built to convert.</p></div>
+</footer>
+
+<!-- IFRAME FULLVIEW MODAL -->
+<div id="iframe-fullview-modal" class="ifm" role="dialog" aria-modal="true" aria-label="3D Experience Full View">
+  <div class="ifm-backdrop"></div>
+  <div class="ifm-container">
+    <div class="ifm-hud">
+      <div class="hud-dots"><span></span><span></span><span></span></div>
+      <div class="ifm-title" id="ifm-title">3D ENGINE // FULL VIEW</div>
+      <button class="ifm-close" aria-label="Close full view">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="ifm-body">
+      <div class="ifm-loader">
+        <div class="loc-loader">
+          <div class="loc-ring"></div>
+          <div class="loc-ring-2"></div>
+        </div>
+        <span>Loading 3D Experience...</span>
+      </div>
+      <iframe id="ifm-iframe" title="3D Full View" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

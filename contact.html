@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — illusionxstudios</title>
+  <meta name="description" content="Start a project with illusionxstudios. We respond within 24 hours."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <style>
+    .stars,.shoot-layer{opacity:.4}
+    .cw{display:flex;min-height:100vh;padding-top:60px}
+    .cl{flex:1;background:#000;padding:72px 56px;display:flex;flex-direction:column;align-items:center;position:relative;overflow:hidden}
+    .cl::after{content:'';position:absolute;top:10%;right:0;bottom:10%;width:1px;background:linear-gradient(to bottom,transparent,var(--cyan),transparent);box-shadow:0 0 14px rgba(0,212,255,.3)}
+    .cl-spots{position:absolute;top:0;left:50%;transform:translateX(-50%);width:560px;height:320px;pointer-events:none;z-index:1}
+    .cl-spot{position:absolute;top:0;width:250px;height:320px;filter:blur(50px);opacity:.14;animation:sw 7s ease-in-out infinite}
+    .cl-spot.l{left:0;background:conic-gradient(from 150deg at 0% 0%,transparent 30%,rgba(0,212,255,.7) 50%,transparent 70%)}
+    .cl-spot.r{right:0;background:conic-gradient(from 30deg at 100% 0%,transparent 30%,rgba(0,212,255,.7) 50%,transparent 70%);animation-direction:reverse}
+    .cl-in{position:relative;z-index:2;width:100%;max-width:380px;display:flex;flex-direction:column;align-items:center;flex:1}
+    .cl-logo-img{height:48px;width:auto;margin-bottom:52px;filter:drop-shadow(0 0 8px rgba(0,212,255,.2))}
+    .ci-list{width:100%;display:flex;flex-direction:column;gap:18px;margin-bottom:40px}
+    .ci{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;border-radius:12px;border:1px solid rgba(0,212,255,.08);transition:border-color .3s,box-shadow .3s}
+    .ci:hover{border-color:rgba(0,212,255,.3);box-shadow:0 0 18px rgba(0,212,255,.06)}
+    .ci-ico{width:38px;height:38px;border-radius:10px;background:rgba(0,212,255,.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px}
+    .ci-txt label{display:block;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:3px;font-family:var(--fm)}
+    .ci-txt a,.ci-txt p{font-size:14px;font-weight:500}.ci-txt a:hover{color:var(--cyan)}
+    .cl-social{display:flex;gap:10px;margin-bottom:40px}
+    .soc{width:38px;height:38px;border-radius:10px;border:1px solid rgba(0,212,255,.2);display:flex;align-items:center;justify-content:center;color:var(--cyan);font-size:15px;transition:transform .2s,box-shadow .2s,background .2s}
+    .soc:hover{transform:scale(1.15);box-shadow:0 0 14px rgba(0,212,255,.3);background:rgba(0,212,255,.08)}
+    .cl-hours{text-align:center;padding:18px;border:1px solid rgba(0,212,255,.08);border-radius:12px;margin-bottom:40px;width:100%}
+    .cl-hours p{font-size:13px;color:var(--muted);line-height:1.8}.cl-hours strong{color:var(--white);font-size:14px}
+    .cr{flex:1;background:#08101e;padding:72px 56px;display:flex;align-items:flex-start;justify-content:center;border-left:1px solid rgba(0,212,255,.08)}
+    .cf-in{width:100%;max-width:430px}
+    .cf-title{font-family:var(--fh);font-size:clamp(26px,3.5vw,40px);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:var(--white);margin-bottom:12px}
+    .cf-sub{font-size:14.5px;color:var(--muted);margin-bottom:36px;line-height:1.65}
+    .ct-ff{position:relative;margin-bottom:24px}
+    .ct-ff label{position:absolute;top:16px;left:0;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:rgba(0,212,255,.6);pointer-events:none;transition:top .2s,font-size .2s,color .2s;font-family:var(--fh)}
+    .ct-ff input,.ct-ff select,.ct-ff textarea{width:100%;border:none;border-bottom:1.5px solid rgba(0,212,255,.2);padding:18px 0 6px;font-size:15px;font-family:var(--fb);color:var(--white);background:transparent;outline:none;transition:border-color .3s;-webkit-appearance:none;appearance:none}
+    .ct-ff textarea{resize:none;min-height:90px}.ct-ff select{cursor:pointer}.ct-ff select option{background:#08101e;color:var(--white)}
+    .ct-ff input:focus,.ct-ff select:focus,.ct-ff textarea:focus{border-bottom-color:var(--cyan)}
+    .ct-ff input:focus+label,.ct-ff input:not(:placeholder-shown)+label,.ct-ff select:focus+label,.ct-ff select.has-value+label,.ct-ff textarea:focus+label,.ct-ff textarea:not(:placeholder-shown)+label{top:2px;font-size:9px;color:var(--cyan)}
+    .ct-ff.err input,.ct-ff.err textarea{border-bottom-color:#ff4466}
+    .ct-ff .emsg{font-size:11px;color:#ff4466;margin-top:4px;display:none}.ct-ff.err .emsg{display:block}
+    .sel-wrap{position:relative}.sel-wrap::after{content:'↓';position:absolute;right:0;top:50%;transform:translateY(-50%);color:rgba(0,212,255,.5);pointer-events:none;font-size:13px}
+    .upload-wrap{margin-top:8px}
+    .upload-label{display:block;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(0,212,255,.65);margin-bottom:10px;font-family:var(--fh)}
+    .f-opt{color:rgba(255,255,255,.3);letter-spacing:.1em;font-size:8.5px}
+    /* .upload-box{border:1.5px dashed rgba(0,212,255,.25);border-radius:12px;padding:22px 18px;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;transition:border-color .25s,background .25s;text-align:center} */
+    .upload-box {
+      border: 1.5px dashed rgba(0,212,255,.25);
+      border-radius: 12px;
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: border-color .25s, background .25s;
+      text-align: center;
+
+      width: 500px;      /* NEW: fixed width */
+      max-width: 100%;   /* NEW: responsive fallback */
+    }
+    .upload-box:hover{border-color:rgba(0,212,255,.6);background:rgba(0,212,255,.04)}
+    .upload-box svg{color:rgba(0,212,255,.5)}
+    .upload-hint{font-size:13.5px;color:rgba(255,255,255,.6)}.upload-link{color:var(--cyan);text-decoration:underline;text-underline-offset:3px}
+    .upload-types{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25)}
+    .upload-chosen{font-size:12px;color:var(--cyan);margin-top:8px;display:flex;align-items:center;gap:6px}
+    .upload-chosen::before{content:'✓';font-size:11px}
+
+    .fr{display:grid;grid-template-columns:1fr 1fr;gap:0 22px}
+    .ct-btn{width:100%;padding:16px;background:transparent;color:var(--cyan);font-family:var(--fh);font-weight:700;font-size:14px;letter-spacing:.05em;border:1px solid rgba(0,212,255,.5);border-radius:8px;cursor:pointer;transition:background .25s,color .25s,box-shadow .25s;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:8px;position:relative;overflow:hidden}
+    .ct-btn::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,212,255,.08),rgba(0,128,255,.08));opacity:0;transition:opacity .3s}
+    .ct-btn:hover{border-color:var(--cyan);box-shadow:0 0 24px rgba(0,212,255,.2);color:var(--white)}.ct-btn:hover::before{opacity:1}
+    .ct-spin{display:none;width:17px;height:17px;border:2px solid rgba(0,212,255,.3);border-top-color:var(--cyan);border-radius:50%;animation:spinanim .7s linear infinite}
+    .ct-btn.loading .ct-spin{display:block}.ct-btn.loading span{display:none}
+    @keyframes spinanim{to{transform:rotate(360deg)}}
+    .f-priv{font-size:11px;color:var(--sub);text-align:center;margin-top:14px;line-height:1.5}.f-req{color:var(--cyan);font-size:10px}
+    .fsuc{display:none;text-align:center;padding:36px;background:rgba(0,212,255,.04);border:1px solid rgba(0,212,255,.2);border-radius:12px;margin-top:20px}
+    .fsuc.show{display:block}.fsuc h3{font-family:var(--fh);font-size:21px;color:var(--white);margin-bottom:8px}.fsuc p{font-size:13.5px;color:var(--muted)}.fsuc-ico{font-size:34px;margin-bottom:14px}
+    @media(max-width:900px){.cw{flex-direction:column}.cl{padding:52px 28px;min-height:auto}.cl::after{display:none}.cr{padding:52px 28px;border-left:none;border-top:1px solid rgba(0,212,255,.08)}.fr{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="meteor-layer" aria-hidden="true"><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div><div class="m"></div></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="cur2" aria-hidden="true"></div>
+
+<!-- NAVBAR — same as index -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo"><img src="assets/img/logo.png" alt="illusionxstudios" class="nav-logo-img"/></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+  <div class="nav-ham" aria-label="Menu"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- MOBILE NAV OVERLAY -->
+<div class="nav-overlay" id="nav-overlay">
+  <ul class="nav-overlay-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <a href="contact.html" class="btn-p nav-overlay-cta">Contact Us</a>
+</div>
+
+<main class="cw">
+  <!-- LEFT PANEL -->
+  <div class="cl">
+    <div class="cl-spots" aria-hidden="true"><div class="cl-spot l"></div><div class="cl-spot r"></div></div>
+    <div class="cl-in">
+      <img src="assets/img/logo.png" alt="illusionxstudios" class="cl-logo-img"/>
+      <div class="ci-list">
+        <div class="ci"><div class="ci-ico">✉</div><div class="ci-txt"><label>Email</label><a href="mailto:info@illusionxstudios.com">info@illusionxstudios.com</a></div></div>
+        <div class="ci"><div class="ci-ico">☎</div><div class="ci-txt"><label>Phone</label><a href="tel:+919940911894">+91 99409 11894</a></div></div>
+
+        <div class="ci">
+          <div class="ci-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+            </svg>
+          </div>
+          <div class="ci-txt">
+            <label>Location</label>
+            <p>Chennai, IN</p>
+          </div>
+        </div>
+        <!-- <div class="ci"><div class="ci-ico">📍</div><div class="ci-txt"><label>Location</label><p>Chennai, IN — Remote-First</p></div></div> -->
+        <div class="ci">
+          <div class="ci-ico">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5.93 6h-3.26a15.34 15.34 0 00-1.34-3.26A8.006 8.006 0 0117.93 8zM12 4c.93 1.48 1.63 3.15 2.09 5H9.91C10.37 7.15 11.07 5.48 12 4zM4.07 8c1.12-2.25 3.05-4 5.33-4.74A15.334 15.334 0 004.07 8zM4 12c0-.34.02-.67.05-1h4.46c-.03.33-.05.66-.05 1s.02.67.05 1H4.05C4.02 12.67 4 12.34 4 12zm2.95 5h3.26c.33 1.02.78 1.97 1.34 2.84A8.006 8.006 0 016.95 17zm5.05 4c-.93-1.48-1.63-3.15-2.09-5h4.36c-.46 1.85-1.16 3.52-2.27 5zm2.27-6h-4.36c.46-1.85 1.16-3.52 2.27-5 1.11 1.48 1.81 3.15 2.27 5zm0 0h4.36c-.46 1.85-1.16 3.52-2.27 5-1.11-1.48-1.81-3.15-2.27-5zm5.33-4h-4.46c.03-.33.05-.66.05-1s-.02-.67-.05-1h4.46c.03.33.05.66.05 1s-.02.67-.05 1z"/>
+            </svg>
+          </div>
+          <div class="ci-txt">
+            <label>Website</label>
+            <a href="index.html">www.illusionxstudios.com</a>
+          </div>
+        </div>
+        <!-- <div class="ci"><div class="ci-ico">🌐</div><div class="ci-txt"><label>Website</label><a href="index.html">www.illusionxstudios.com</a></div></div> -->
+      </div>
+      <div class="cl-social">
+        <!-- <a class="soc" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a class="soc" href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a> -->
+        <!-- <a class="soc" href="#" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a> -->
+      </div>
+
+
+      <div class="cl-social">
+        <a class="soc" href="mailto:hello@illusionxstudios.com" aria-label="Email" target="_blank" rel="noopener">
+          ✉
+        </a>
+        <a class="soc" href="https://wa.me/919940911894" aria-label="WhatsApp" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+        <!-- <a class="soc" href="#" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a class="soc" href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a> -->
+
+        <a class="soc" href="https://www.linkedin.com/in/illusion-x-studios-482640298/" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+
+        <!-- <a class="soc" href="https://www.instagram.com/illusionxstudios/" aria-label="Instagram" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a> -->
+      </div>
+
+      <div class="cl-hours"><strong>Office Hours</strong><p>Monday – Saturday: 9 AM – 7 PM IST<br><span style="font-size:12px;color:var(--sub)">Projects across timezones — we adapt to you.</span></p></div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL — FORM -->
+  <div class="cr">
+    <div class="cf-in">
+      <h1 class="cf-title">Let's Build Something Extraordinary</h1>
+      <p class="cf-sub">Tell us about your project. We respond within 24 hours.</p>
+      <form id="contact-form" novalidate>
+        <div class="fr">
+          <div class="ct-ff"><input type="text" id="cf-name" placeholder=" " required autocomplete="name"/><label for="cf-name">Full Name <span class="f-req">*</span></label><p class="emsg">Please enter your name.</p></div>
+          <div class="ct-ff"><input type="email" id="cf-email" placeholder=" " required autocomplete="email"/><label for="cf-email">Email Address <span class="f-req">*</span></label><p class="emsg">Please enter a valid email.</p></div>
+        </div>
+        <div class="ct-ff"><input type="text" id="cf-company" placeholder=" " autocomplete="organization"/><label for="cf-company">Company Name</label></div>
+        <div class="ct-ff"><div class="sel-wrap"><select id="cf-service"><option value="" disabled selected></option><option value="3d">Interactive 3D Solutions</option><option value="viz">3D Visualization &amp; Animation</option><option value="web">Web Design &amp; Development</option><option value="mkt">Digital Marketing &amp; Visual Content</option><option value="vid">Visual Content Production</option><option value="multi">Multiple Services</option></select><label for="cf-service">Service Needed</label></div></div>
+        <div class="ct-ff"><div class="sel-wrap"><select id="cf-budget"><option value="" disabled selected></option><option value="s">Under $5,000</option><option value="m">$5,000 – $20,000</option><option value="l">$20,000 – $50,000</option><option value="xl">$50,000+</option><option value="r">Ongoing Retainer</option></select><label for="cf-budget">Project Budget</label></div></div>
+
+        <div class="ct-ff"><textarea id="cf-msg" rows="5" placeholder=" " required></textarea><label for="cf-msg">Project Brief <span class="f-req">*</span></label><p class="emsg">Please tell us about your project.</p></div>
+        <div class="ct-ff upload-wrap">
+          <label class="upload-label" for="cf-file">Project Files <span class="f-opt"></span></label>
+          <div class="upload-box" id="upload-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            <span class="upload-hint">Drop your file here or <span class="upload-link">browse</span></span>
+            <span class="upload-types">.rar, .zip, .pdf — max 25 MB</span>
+            <input type="file" id="cf-file" accept=".rar,.zip,.pdf" hidden/>
+          </div>
+          <p class="upload-chosen" id="upload-chosen" style="display:none"></p>
+          <p class="emsg" id="upload-err" style="display:none">File too large. Maximum size is 25 MB.</p>
+        </div>
+
+        <button type="submit" class="ct-btn"><div class="ct-spin"></div><span>Send Message →</span></button>
+        <p class="f-priv">Your information is confidential and will never be shared with third parties.</p>
+      </form>
+      <div class="fsuc" id="form-success"><div class="fsuc-ico">✅</div><h3>Message Sent!</h3><p>We've received your brief and will get back to you within 24 hours.</p></div>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
