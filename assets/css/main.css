@@ -1256,3 +1256,17 @@ body.ifm-open {
     padding: 16px 8px;
   }
 }
+
+/* Hide the custom cursor when hovering over the iframe wrapper or fullview modal */
+body:has(.srv-iframe-wrap:hover) #cur,
+body:has(.srv-iframe-wrap:hover) #cur2,
+body:has(.ifm-body:hover) #cur,
+body:has(.ifm-body:hover) #cur2 {
+  opacity: 0 !important;
+}
+
+/* Ensure the wrapper uses the standard cursor so the transition feels natural */
+.srv-iframe-wrap, 
+.ifm-container {
+  cursor: auto;
+}
