@@ -425,7 +425,7 @@ function initForm(){
     
     formData.append('message', document.getElementById('cf-msg').value);
 
-    formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY'); // ← paste your key here
+    formData.append('access_key', 'f60a742d-fcb8-46e5-9b1d-242d191ad584'); // ← paste your key here
 
     fetch('https://api.web3forms.com/submit', {
       method: 'POST',
