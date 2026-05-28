@@ -425,56 +425,29 @@ function initForm(){
     
     formData.append('message', document.getElementById('cf-msg').value);
 
-    // Grab the file if one was selected
-    var fileInput = document.getElementById('cf-file');
-    if (fileInput.files.length > 0) {
-      formData.append('file', fileInput.files[0]);
-    }
+    formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY'); // ← paste your key here
 
-    // 2. Send the data to the PHP script
-    fetch('process_form.php', {
+    fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       body: formData
     })
-    .then(response => response.json())
-    .then(data => {
+    .then(function(response){ return response.json(); })
+    .then(function(data){
       if (btn) btn.classList.remove('loading');
-      
-      if(data.success) {
-        // Success: Hide form, show success message
+      if (data.success) {
         form.style.display = 'none';
         var suc = document.getElementById('form-success');
-        if(suc) suc.classList.add('show');
+        if (suc) suc.classList.add('show');
       } else {
         alert('Could not send message: ' + (data.message || 'Unknown error'));
       }
     })
-    .catch(error => {
+    .catch(function(error){
       if (btn) btn.classList.remove('loading');
       alert('A network error occurred. Please try again later.');
       console.error('Form submission error:', error);
     });
   });
-
-  // UI behavior for file uploads and dropdowns (unchanged from your original code)
-  var ub = document.getElementById('upload-box'), fi = document.getElementById('cf-file'), uc = document.getElementById('upload-chosen'), ue = document.getElementById('upload-err');
-  if(ub && fi){
-    ub.addEventListener('click',function(){fi.click()});
-    fi.addEventListener('change',function(){
-      ue.style.display='none';
-      if(fi.files[0]){
-        if(fi.files[0].size > 25*1024*1024){
-          ue.style.display='block';
-          uc.style.display='none';
-          fi.value='';
-        } else {
-          uc.textContent=fi.files[0].name;
-          uc.style.display='flex';
-          ub.style.borderColor='rgba(0,212,255,.6)';
-        }
-      }
-    })
-  }
 
   form.querySelectorAll('input,textarea').forEach(function(el){
     el.addEventListener('input',function(){var w=el.closest('.ff')||el.closest('.ct-ff');if(w)w.classList.remove('err')})
