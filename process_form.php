@@ -3,21 +3,21 @@
 header('Content-Type: application/json');
 
 // 1. YOUR EMAIL SETTINGS
-$to = "admin@illusionxstudios.com"; // Where you want to receive the emails
-$from = "admin@illusionxstudios.com"; // Must be an email address hosted on your Hostinger account to prevent spam blocking
+$to = "admin@illusionxstudios.com"; 
+$from = "admin@illusionxstudios.com"; 
 $subject = "New Project Brief - Illusion X Studios";
 
 // 2. SANITIZE AND COLLECT POST DATA
 $name = htmlspecialchars($_POST['name'] ?? '');
-$email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
-$email = str_replace(array("\r", "\n"), '', $email); // Prevent header injection
+$customer_email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
+$customer_email = str_replace(array("\r", "\n"), '', $customer_email);
 $company = htmlspecialchars($_POST['company'] ?? 'Not provided');
 $service = htmlspecialchars($_POST['service'] ?? 'Not selected');
 $budget = htmlspecialchars($_POST['budget'] ?? 'Not selected');
 $message = htmlspecialchars($_POST['message'] ?? '');
 
 // Basic validation check
-if (empty($name) || empty($email) || empty($message)) {
+if (empty($name) || empty($customer_email) || empty($message)) {
     echo json_encode(["success" => false, "message" => "Required fields are missing."]);
     exit;
 }
@@ -25,7 +25,7 @@ if (empty($name) || empty($email) || empty($message)) {
 // 3. BUILD THE EMAIL BODY
 $bodyText = "You have a new contact form submission:\n\n";
 $bodyText .= "Name: $name\n";
-$bodyText .= "Email: $email\n";
+$bodyText .= "Email: $customer_email\n";
 $bodyText .= "Company: $company\n";
 $bodyText .= "Service: $service\n";
 $bodyText .= "Budget: $budget\n";
@@ -33,7 +33,8 @@ $bodyText .= "Project Brief:\n$message\n";
 
 // 4. SETUP HEADERS
 $headers = "From: $from\r\n";
-$headers .= "Reply-To: $email\r\n";
+$headers .= "Reply-To: $customer_email\r\n"; // Lets you reply directly to the client
+$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
 // 5. HANDLE ATTACHMENT (IF UPLOADED)
 if (isset($_FILES['file']) && $_FILES['file']['error'] == UPLOAD_ERR_OK) {
