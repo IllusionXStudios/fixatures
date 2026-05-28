@@ -3,8 +3,8 @@
 header('Content-Type: application/json');
 
 // 1. YOUR EMAIL SETTINGS
-$to = "info@illusionxstudios.com"; // Where you want to receive the emails
-$from = "no-reply@illusionxstudios.com"; // Must be an email address hosted on your Hostinger account to prevent spam blocking
+$to = "admin@illusionxstudios.com"; // Where you want to receive the emails
+$from = "admin@illusionxstudios.com"; // Must be an email address hosted on your Hostinger account to prevent spam blocking
 $subject = "New Project Brief - Illusion X Studios";
 
 // 2. SANITIZE AND COLLECT POST DATA
