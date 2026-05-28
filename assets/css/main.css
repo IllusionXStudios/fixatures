@@ -403,7 +403,7 @@ footer{position:relative;z-index:2;background:#020308;border-top:1px solid rgba(
   .hero-btns-wrap{flex-direction:column;width:100%;padding:0;box-sizing:border-box}
   .hero-btns-wrap .btn-p,.hero-btns-wrap .btn-g{width:100%;text-align:center;box-sizing:border-box}
   .hero-deco-num{display:none}
-  .hero-indicators{bottom:30px}
+  .hero-indicators{bottom:30px;display:none}
 
   /* CARDS */
   .hscroll-card,.hscroll-card-wide{flex:0 0 82vw}
